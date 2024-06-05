@@ -1,5 +1,5 @@
 [project]
-name = "sparv-sbx-uppercase"
+name = "sparv-sbx-retreat2024-plugin"
 version = "0.1.0"
 description = "Uppercase converter (example plug-in for Sparv)"
 readme = "README.md"
@@ -10,4 +10,4 @@ license.text = "MIT License"
 dependencies = [
     "sparv-pipeline~=5.0"
 ]
-entry-points."sparv.plugin" = { sbx_uppercase = "sbx_uppercase" }
+entry-points."sparv.plugin" = { sbx_retreat2024_plugin = "sbx_retreat2024_plugin" }
