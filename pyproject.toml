@@ -1,7 +1,7 @@
 [project]
 name = "sparv-sbx-retreat2024-plugin"
 version = "0.1.0"
-description = "Uppercase converter (example plug-in for Sparv)"
+description = "Example plug-in for Sparv"
 readme = "README.md"
 license.text = "MIT License"
 # authors = [
