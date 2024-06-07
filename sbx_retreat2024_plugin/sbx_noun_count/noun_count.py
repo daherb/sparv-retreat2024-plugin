@@ -23,3 +23,20 @@ def sentence_nouns(
                 count += 1
         output.append(str(count))  # Append count to result
     out.write(output)
+
+@annotator("Count number of nouns per text")
+def text_nouns(
+    text: Annotation = Annotation("<text>"),
+    sentence_noun_counts: Annotation = Annotation("<sentence>:sbx_retreat2024_plugin.noun_count_sent"),
+    out: Output = Output("<text>:sbx_retreat2024_plugin.noun_count_text"),
+):
+    """Annotate texts with number of nouns in all sentences."""
+    output = []  # Resulting annotation values, one per sentence
+    counts_list = list(sentence_noun_counts.read())
+    texts, _orphans = text.get_children(sentence_noun_counts)
+    for t in texts:
+        count = 0
+        for c in t:
+            count += int(counts_list[c])
+        output.append(str(count))
+    out.write(output)
