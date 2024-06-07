@@ -6,7 +6,7 @@ from sparv.api import Annotation, Output, annotator, Text
 @annotator("Convert every word to uppercase")
 def uppercase(
     word: Annotation = Annotation("<token:word>"),
-    out: Output = Output("<token>:sbx_retreat2024_plugin.sbx_uppercase.upper"),
+    out: Output = Output("<token>:sbx_retreat2024_plugin.upper_token"),
     # some_config_variable: str = Config("sbx_uppercase.some_setting")
 ):
     """Convert to uppercase."""
@@ -17,7 +17,7 @@ def uppercase(
 def uppercase_sent_token(
     word: Annotation = Annotation("<token:word>"),
     sentence: Annotation = Annotation("<sentence>"),
-    out: Output = Output("<sentence>:sbx_retreat2024_plugin.sbx_uppercase.upper_sent_token"),
+    out: Output = Output("<sentence>:sbx_retreat2024_plugin.upper_sent_token"),
 ):
     """Convert to uppercase."""
     words = list(word.read())
@@ -32,7 +32,7 @@ def uppercase_sent_token(
 def uppercase_sent_text(
     text: Text = Text(),
     sentence: Annotation = Annotation("<sentence>"),
-    out: Output = Output("<sentence>:sbx_retreat2024_plugin.sbx_uppercase.upper_sent_text"),
+    out: Output = Output("<sentence>:sbx_retreat2024_plugin.upper_sent_text"),
 ):
     """Convert to uppercase."""
     complete_text=list(text.read())
