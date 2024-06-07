@@ -17,7 +17,6 @@ def sentence_nouns(
     for s in sentences:
         count = 0
         for w in s:
-            print(pos_list[w])
             # Do something with pos_list[w] here
             if pos_list[w] == "NN":
                 count += 1
