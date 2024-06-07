@@ -14,8 +14,8 @@ def sentence_nouns(
     output = []  # Resulting annotation values, one per sentence
 
     # Count the nouns per sentence
-    count = 0
     for s in sentences:
+        count = 0
         for w in s:
             print(pos_list[w])
             # Do something with pos_list[w] here
