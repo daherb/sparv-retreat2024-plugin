@@ -6,7 +6,7 @@ from sparv.api import Annotation, Output, annotator, Text
 def sentence_nouns(
     token_pos: Annotation = Annotation("<token:pos>"),
     sentence: Annotation = Annotation("<sentence>"),
-    out: Output = Output("<sentence>:sbx_retreat2024_plugin.sbx_noun_count.nouncount"),
+    out: Output = Output("<sentence>:sbx_retreat2024_plugin.noun_count_sent"),
 ):
     """Annotate sentences with number of nouns per sentence."""
     sentences, _orphans = sentence.get_children(token_pos)  # Ignore the orphans 😢
